@@ -1,2 +1,46 @@
-# Teste
-123
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Página que fala Oi</title>
+
+    <style>
+
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+
+        button { padding: 20px 40px; font-size: 24px; cursor: pointer; background-color: #007bff; color: white; border: none; border-radius: 8px; }
+
+        button:hover { background-color: #0056b3; }
+
+    </style>
+
+</head>
+
+<body>
+
+    <button onclick="falar()">Ouvir "Audio deus"</button>
+
+    <script>
+
+        function falar() {
+
+            // Cria a mensagem
+
+            const mensagem = new SpeechSynthesisUtterance("Nethz pintão. minha barriga suporta pão");
+
+            mensagem.lang = 'pt-BR'; // Define o idioma para português
+
+            
+
+            // Faz o navegador falar
+
+            window.speechSynthesis.speak(mensagem);
+
+        }
+
